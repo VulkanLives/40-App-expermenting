@@ -1,7 +1,7 @@
 import random
 from tkinter import *
 
-from pandas.core.common import not_none
+
 
 root = Tk()
 

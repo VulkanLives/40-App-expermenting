@@ -10,12 +10,18 @@ e = Entry(root, width = 10)
 e.grid(row=40, column=20)
 e.focus()
 
+#create horizontal slide
+horiz_slide = Scale(root, from_= 1, to= 40, orient=HORIZONTAL)
+horiz_slide.grid()
+
+horiz_slide_lbl = Label(root, text=horiz_slide.get())
+horiz_slide_lbl.grid()
+
 
 def horizontal_slide():
-    global user_input
-    horiz_slide_lbl = (Label(root, text= horiz_slide.get))
+    horiz_slide_lbl = (Label(root, text= str(horiz_slide.get)))
     horiz_slide_lbl.grid(row = 3, column =3)
-    user_input = e.get()  # get user input,will be as string
+    user_input = e.get() # get user input,will be as string
     amount_of_dice = int(user_input)  # convert user string into int
     rollDice(amount_of_dice)  # call roll function and pass it number entered by user
 
@@ -35,12 +41,6 @@ def rollDice(number):
   print("Average roll: ", average)
   print(result_list)
 
-#create horizontal slide
-horiz_slide = Scale(root, from_= 1, to= 40, orient=HORIZONTAL)
-horiz_slide.grid()
-
-horiz_slide_lbl = Label(root, text=horiz_slide.get())
-horiz_slide_lbl.grid()
 
 
 btn_slide_h =Button(root, text= "Roll Dice", command=horizontal_slide).grid()
