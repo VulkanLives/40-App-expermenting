@@ -1,0 +1,10 @@
+
+I had to run python
+
+-m PyInstaller script.py
+
+Even though the Python script directory is configured correctly in the environment variable PATH, you can observe that there is no script named PyInstaller. When you pip install, the module goes into [python directory]/lib/site-packages.
+
+To run a Python module, follow the pattern python -m [script name] [args].
+
+Python version: 3.10.0
